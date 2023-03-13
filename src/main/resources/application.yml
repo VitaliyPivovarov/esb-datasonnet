@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework: INFO
+
+spring:
+  activemq:
+    broker-url: ${BROKER_URL:tcp://localhost:61616}
+    user: ${BROKER_USER:admin}
+    password: ${BROKER_PASS:admin}
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:5432/postgres
+    username: ${POSTGRES_USERNAME:root}
+    password: ${POSTGRES_PASSWORD:root}
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+        temp:
+          use_jdbc_metadata_defaults: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+    show-sql: false
+
+  liquibase:
+    change-log: classpath:db-migrations/changelog.xml
+    enabled: true
+    drop-first: false
+
+  output:
+    ansi:
+      enabled: ALWAYS
+
+camel:
+  springboot:
+    main-run-controller: true

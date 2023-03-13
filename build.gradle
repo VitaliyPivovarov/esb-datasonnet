@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.4.8'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.pivovaroff'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //SPRING
+    //implementation 'org.springframework.boot:spring-boot-starter'
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    //CAMEL
+    implementation 'org.apache.camel.springboot:camel-spring-boot-starter:3.20.2'
+    implementation 'org.apache.camel.springboot:camel-activemq-starter:3.20.2'
+    implementation 'org.apache.camel:camel-datasonnet:3.20.2'
+    //UTILS
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    //DB
+    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.liquibase:liquibase-core:4.17.2'
+    //TEST
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

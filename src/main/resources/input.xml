@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profiles>
+    <profile name="Test_user" time="2023-03-13 13:00:00">
+        <logs>
+            <p>login</p>
+            <p>some process</p>
+            <p>logout</p>
+        </logs>
+    </profile>
+</profiles>
