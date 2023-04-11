@@ -1,4 +1,5 @@
-# ESB (Camel) + DataSonnet
+# ESB (Camel) + DataSonnet 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1ac5d62c93bd41e2836c0107e7834256)](https://app.codacy.com/gh/VitaliyPivovarov/esb-datasonnet/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ## Introduction
 Assume that we receive some data and wish to translate it into a different format. 
